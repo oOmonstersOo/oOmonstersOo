@@ -1,0 +1,164 @@
+body{
+    background-image: url(img/fondo.jpg);
+    width: 100%;
+    color: #bc2621;
+    max-width: 2000px;
+    min-height: 50px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+nav {
+    position: fixed;
+    /* posicion fija*/
+    height: 60px;
+    /* altura definida */
+    overflow: hidden;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: #9423bc;
+    width: 100%;
+    opacity: 0.7;
+}
+
+
+.logo{
+    background: url(img/imagen2.png) no-repeat 80% 80%;
+    background-size: contain;
+    width: 180px;
+    height: 55px;
+    float: left;
+}
+
+.menu{
+    position: absolute;
+    right: 20px;
+}
+
+.menu a{
+    color: #fc0000;
+    text-decoration: none;
+    font-weight: 100;
+    margin-left: 30px;
+    margin-right: 50px;
+    transition: color 1s;
+    text-transform: uppercase;
+}
+
+.menu a:hover{
+    color: #9e7229;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4em;
+    grid-template-rows: minmax(100px auto);
+    padding: 40px;
+}
+.container div{
+    background: #ebb434;
+    padding: 2px;
+}
+
+.container div:hover{
+    border: 5px solid yellow;
+}
+
+img{
+    display:block;
+    margin:auto;
+}
+.container1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    grid-template-rows: minmax(100px auto);
+    padding: 20px;
+}   
+
+.container1 div{
+    background: #09238c;
+    padding:2px;
+    margin-top: 50px;
+    
+}
+.container1 div:hover{
+    border: 5px solid yellow;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2em;
+    grid-template-rows: minmax(50px auto);
+    padding: 50px;
+
+}   
+
+.container2 div{
+    background: #09238c;
+    padding:2px;
+    margin-top: 100px;
+    
+}
+.container2 div:hover{
+    border: 5px solid yellow;
+}
+
+h1{
+    margin-top: 100px;
+}
+
+/* ESTILOS PARA EL MENU DESPLEGABLE */
+.btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+.btn:hover > span {
+    background-color: #E85860;
+}
+.btn span {
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: #333;
+}
+@media only screen and (max-width: 550px){
+        nav {
+        overflow: visible;
+    }
+    .menu {
+        width: 100%;
+        right: 0;
+        top: 80px;
+        background: #f1f1f1E6;
+        overflow: hidden;
+        max-height: 0;
+    }
+    .menu a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+    .btn {
+        display: block;
+        cursor: pointer;
+    }
+    .show {
+        max-height: 500px;
+    }
+}
+
+.container1 a{
+    color: #780b0b;
+    transition: color 1s;
+    text-transform: uppercase;
+}
+.container1 a:hover{
+    color: #af6508;
+}
+
