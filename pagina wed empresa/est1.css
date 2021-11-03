@@ -1,0 +1,500 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+	background-color: whitesmoke;
+	color: black;
+	margin: 0;
+}
+
+
+header {
+	display: flex;
+	width: 80%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+	font-family: monaco;
+}
+img{
+	display: block;
+	margin: auto;
+	width: 30%;
+    opacity: 0.4;
+}
+img:hover{
+    opacity: 1.0;
+}
+
+nav{
+	flex: 2;
+	margin-top: 20px;
+
+}
+
+.menu{
+    position: absolute;
+    right: 50px;
+}
+
+.menu a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+    padding: 50px 10px;
+    display: inline-block;
+    font-size: 16px;
+    transition: color 1s;
+    /*text-transform: uppercase;*/
+}
+
+.menu button{
+    background-color: #e1e1e1;
+    color: #959595;
+    font-weight: 600;
+    padding: 20px 32px;
+    border: none;
+    display: inline-block;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 1s;
+    cursor: pointer;
+}
+
+.menu button:hover{
+    color: #dde0f0;
+}
+
+.menu a:hover{
+    color: #dde0f0;
+}
+
+
+.logo {
+    flex: 1;
+    font-weight: 500;
+    margin: 2px;
+    background-size: contain;
+    width: 40%;
+    height: 60px;
+    float: left;
+}
+.logo img{
+    margin-left: 5px;
+}
+
+section{
+  flex: 3;
+    margin-top: 120px;
+
+}
+/* ESTILOS DE LA PAGINA EN GENERAL */
+p {
+    font-family: 'Italianno', cursive;
+    padding: 20px;
+    font-size: 18px;
+    text-align: justify;
+    margin: 15px 25px;
+    color: black;
+}
+
+footer {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+/* ESTILOS PARA EL MENU DESPLEGABLE */
+.btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+.btn:hover > span {
+    background-color: #E85860;
+}
+.btn span {
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: #333;
+}
+@media only screen and (max-width: 900px){
+        nav {
+        overflow: visible;
+    }
+    .menu {
+        width: 100%;
+        right: 0;
+        top: 80px;
+        background: #f1f1f1E6;
+        overflow: hidden;
+        max-height: 0;
+    }
+    .menu a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+    .menu button{
+        display: flex;
+        display: inline-block;
+        text-align: right;
+        margin-left: 180px;
+        margin-top: 10px;
+    }
+    .btn {
+        display: block;
+        cursor: pointer;
+    }
+    .show {
+        max-height: 500px;
+    }
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+	gap: 10em;
+	grid-template-rows: minmax(100px, auto);
+	padding: 80px;
+}
+.container div{
+	background: #a4a3a2;
+	padding: 2px;
+	padding-top: 50px;
+}
+.container div:hover{
+	border: 4px gray;
+}
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.overlay {
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    display: block;
+    background: #C3C1B5;
+    box-shadow: 9px 9px 5px 9px rgba(0,0,0,0.9);
+    border-radius: 25% 10%;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+    text-align: center;
+    width: 1000px;
+    height: 750px;
+    transform: scale(0.7);
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 30px;
+    line-height: 30px;
+    display: block;
+    margin-left: 1100px;
+    transition: .3s ease all;
+    color: #6d6d6d;
+    margin-top: -75px;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: #ff0000;
+}
+
+.popup h3 {
+    font-size: 30px;
+    font-weight: 800;
+    opacity: 0;
+    font-family: 'Londrina Shadow', cursive;
+}
+
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+
+.popup.active { transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active input { animation: entradatitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaSubtitulo {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradatitulo {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1; 
+    }
+}
+
+@keyframes entradaInputs {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+.menu button{
+    color: #959595;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: none;
+    transition: color 1s;
+}
+
+.menu button:hover{
+    color: #dde0f0;
+}
+.col-75{
+    font-family: 'Architects Daughter', cursive;
+}
+.col-26 input{
+    margin: 0 50px 20px 50px;
+}
+
+.letras h4{
+   font-family: 'Londrina Shadow', cursive;
+}
+
+.donar input{
+    margin: 0 50px 20px 50px;
+    cursor: pointer;
+
+}
+
+.envio {
+    margin-top: -10px;
+}
+.envio input{
+    margin: 30px;
+    width: 35%;
+    height: 30px;
+    background-color: #acacac;
+    color: #dcdada;
+    font-size: 23px;
+    transition: color 1s;
+    cursor: pointer;
+}
+
+.envio input:hover{
+    color: #9c9b9b;
+}
+
+.col-24 input{
+    margin: 0 20px 5px 100px;
+}
+
+.col-22 input{
+    margin: 0 20px 5px 100px;
+    width: 300px;
+}
+.col-28 input{
+    margin: 0 100px 0 100px;
+    width: 200px;
+}
+
+.col-28 input .input{
+    width: 200px;
+}
+
+.col-28 label{
+    margin: 0 210px 0 50px;
+}
+fieldset{
+    border-width: 20px;
+    padding: 10px;
+}
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.over {
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.over.active {
+    visibility: visible;
+}
+
+.pop {
+    display: block;
+    background: #C3C1B5;
+    box-shadow: 9px 9px 5px 9px rgba(0,0,0,0.9);
+    border-radius: 25% 10%;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 800px;
+    height: 600px;
+    transform: scale(0.7);
+}
+
+.pop .btn-cerrar {
+    display: block;
+    font-size: 30px;
+    line-height: 30px;
+    transition: .3s ease all;
+    color: #6d6d6d;
+    margin-top: -120px;
+    margin-left: 900px;
+}
+
+.pop .btn-cerrar:hover {
+    color: #ff0000;
+}
+
+.pop h3 {
+    font-size: 30px;
+    font-weight: 800;
+    opacity: 0;
+    font-family: 'Londrina Shadow', cursive;
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+
+.pop.active { transform: scale(1); opacity: 1; }
+.pop.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.pop.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.pop.active input { animation: entradatitulo .8s ease .5s forwards; }
+.pop.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaSubtitulo {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradatitulo {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1; 
+    }
+}
+
+@keyframes entradaInputs {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.envio1 input{
+    border: none;
+    background-color: #6d6d6d;
+    margin: 0 100px 0 100px;
+    transition: color 1s;
+    font-size: 30px;
+    width: 100px;
+    height: 50px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.envio1 input:hover{
+    color: #e6e6e6;
+}
+
+.boton button{
+    color: #959595;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: none;
+    transition: color 1s;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.boton button:hover{
+    color: #dde0f0;
+}
+
+footer{
+    display: block;
+    text-align: center;
+
+}
