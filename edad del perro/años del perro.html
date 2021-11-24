@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Años del perro</title>
+	<style type="text/css">
+		body {
+			background: #0b2ab9;
+		}
+		input{
+			display: block;
+			width: 250px;
+			height: 30px;
+			text-align: center;
+			align-items: center;
+			border-width: 10px 5px 10px 5px;
+		}
+		.art div {
+			display: block;
+			padding: 0 0 20px 0;
+			text-align: center;
+		}
+		.art .bot input{
+			display: block;
+			text-align: center;
+			width: 200px;
+			height: 40px;
+			font-size: 20px;
+			font-weight: 700;
+			cursor: pointer;
+			background-color: #d5992f;
+			transition: color 1s;
+		}
+
+	.cla {
+		display: block;
+		text-align: center;
+	}
+	.arre a{
+		display: block;
+		font-size: 20px;
+		font-weight: 800;
+		transition: color 1s;
+		color: #18b41a;
+	}
+	.arre a:hover {
+		color: #97951e;
+	}
+	p{
+		font-weight: 800;
+		font-size: 20px;
+	}
+ 	</style>
+</head>
+<body>
+	<div class="arre"><a href="arreglarvec.html">vectores</a></div>
+	<div class="cla">
+<div id="respuesta"></div>
+
+	<div><a href="imagenes/perrito.jpg" target="_blank"><img src="imagenes/perrito.jpg"  style="width:30%;"></a></div>
+	<p>DESCUBRE CUANTOS AÑOS TIENE TU MASCOTA EN (MITOS) O HUMANOS!!</p>
+<div class="art">
+	<div><input type="text" name="nm" placeholder="Nombre de tu Perro"></div>
+	<div><input type="text" id="numero" placeholder="año/edad" /></div>
+	<div class="bot"><input type="button" value="calcular" onclick="edad()"/></div>
+</div>
+		
+	<div class="calculos" id="salida" class="al"></div>
+</div>
+
+	<script language="javascript">
+		function edad(){
+
+	var resp=parseInt(document.getElementById("numero").value);
+	var y= Math.log(resp);
+	
+	var x = 16*(y)+31;
+
+document.getElementById("salida").innerHTML ="su edad en años humanos es <br>"+x+" <br>Edad según MITO es: <br>"+resp*7;
+}
+	</script>
+</body>
+</html>
