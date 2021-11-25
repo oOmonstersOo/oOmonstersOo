@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Empresa</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="est1.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="contenedor">
+		<nav>
+			<div class="boton"><button id="btn-abrir" class="btn-cerrar">Iniciar</button></div>
+		</nav>
+	<header>
+		<nav>
+			<div class="logo">
+			<a href="img/imagen.jpg" target="_black"><img src="img/imagen.jpg" alt="logo"></a>
+		</div>
+		<a class="btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+		<h1>"nombre de la empresa"</h1>
+		<div class="menu">
+			<a href="home.html">Home</a>
+			<a href="equipo.html">Equipo</a>
+			<a href="clientes.html">Clientes</a>
+			<a href="contactos.html">Contactos</a>
+			<a href="nosotros.html">Nosotros</a>
+			<a href="noticias.html">Noticias/Fotos/Videos</a>
+			<a href="servicio.html">Servicios y Productos</a>
+			<button id="btn-abrir-popup" class="btn-cerrar-popup">Donar</button>
+		</div>	
+		</nav>
+	</header>
+	<section>
+		<div><a href="img/imagen1.jpg" target="_black"><img src="img/imagen1.jpg"></a><div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</section>
+<!---Empresa-->
+<div class="over" id="over">
+	<div class="pop" id="pop">
+		<a href="#" id="btn-cerrar" class="btn-cerrar"><i class="fas fa-times"></i></a>
+<section class="secion">
+	<form action="" class="formulas">
+	<header class="letras1">
+		<h3>DATOS PERSONALES PARA LA EMPRESA</h3>
+	</header><hr style="height: 5px;">
+		<div class="container4">
+			<div class="col-25">
+				<label><h3>Nombre: </h3></label>
+			</div>
+			<input type="text" name="nom" placeholder="Escribe tu Nombre">
+		</div><hr style="height: 10px;">
+	<div class="col-75">
+			<label><h3>Correo: </h3></label>
+		<input type="text" name="Co" placeholder="Escribe Tu Correo">
+	</div><hr style="height: 5px;">
+		<div class="col-75">
+			<div class="col-25"><h3>Pais</h3></div>
+			<select name="pais">
+				<option>Bolivia</option>
+				<option>Brasil</option>
+				<option>Perpu</option>
+				<option>Argentina</option>
+				<option>Chile</option>
+			</select>
+		</div><hr style="height: 5px;">
+	<div class="col-75">
+		<div class="col-75"><h3>Tipo de Proyecto</h3></div>
+		<input type="text" name="tipo" placeholder="Tipo de proyecto"><br><br>
+	</div><hr style="height: 10px;">
+	<div class="col-75">
+		<div class="col-75"><h3>Comentarios</h3></div>
+		<textarea name="Mensaje"></textarea>
+	</div>
+	<div class="envio1">
+		<input type="submit" value="Enviar">
+		<input type="reset" name="clear" value="Borrar">
+	</div>
+	</form>
+</section>
+	</div>
+</div>
+	<!--- fomrulario para donacion --->
+
+	<div class="overlay" id="overlay">
+		<div class="popup" id="popup">
+			<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+<section class="seccion">
+	<form action="" class="letras">
+		<h3>DONACION</h3>
+		<hr style="height: 10px;">
+	<div class="col-75">
+		<div class="col-25">
+			<div class="donar"><input type="radio" name="Tipo" value="Mensual">Donar Mensualmente
+			<input type="radio" name="Tipo" value="Anual">Donar Anualmente</div>
+		</div>
+	</div>
+	<div class="col-75">
+		<div class="col-24">
+			<select name="Valor Del Dinero">
+				<option>Dolares</option>
+				<option>Euros</option>
+			</select>
+				<input type="text" name="tipo" placeholder="Cantidad De Dinero">$/Euros<hr style="height: 10px;">
+		</div>
+	</div>
+	<div class="col-75">
+		<div class="col-26">
+			<div><h4>SELECCIONA EL METODO DE PAGO</h4></div><br>
+				<input type="radio" name="tipo" value="Tarjeta">Tarjeta De Credito
+				<input type="radio" name="tipo" value="punto">Tarjeta Debito<hr style="height: 10px;">
+			
+		</div>
+	</div>
+	<div class="col-75">
+		<div class="col-22">
+			<div><h3>Informacion Personal</h3></div>
+			<input type="text" name="tipo" placeholder="Nombre/s">
+			<input type="text" name="tipo" placeholder="Apellidos"><br>
+			<input type="text" name="tipo" placeholder="Correo Electronico">
+		</div>
+	</div>
+	<div class="col-75">
+		<div class="col-28">
+			<fieldset>
+				<legend><h4>Informacion De La Tarjeta de Credito</h4></legend>
+				<label>Numero De Tarjeta</label>
+				<label>CVC</label><br>
+				<input type="text" name="tipo" placeholder="Numero De Tarjeta">
+				<input type="text" name="tipo" placeholder="CVC"><br>
+				<textarea placeholder="Nombre Del Titular De La Tarjeta" name="text"></textarea>
+				<label><h3>Caducidad</h3></label>
+				<input type="text" name="tipo1" placeholder="Caducidad" class="input">
+			</fieldset>
+		</div>
+	</div>
+	<div class="envio">
+		<input type="submit" value="Enviar Donacion">
+		<input type="reset" name="clear" value="Borrar Datos">
+	</div>
+	</form>
+</section>
+		</div>
+	</div>
+</div>
+
+	<footer>
+		Derechos Reservados
+	</footer>
+	  <script type="text/javascript">
+        $(".btn").on("click", function(){
+            $('.menu').toggleClass("show");
+        });
+    </script>
+    <script src="popup.js"></script>
+</body>
+</html>
